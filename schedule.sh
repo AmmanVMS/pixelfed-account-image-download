@@ -14,6 +14,7 @@ secret="secret.txt"
 log="$0.log"
 
 ( (
+    date
     cd "`dirname \"$0\"`"
 
     source "ENV/bin/activate"
@@ -23,7 +24,7 @@ log="$0.log"
       exit
     fi
 
-    python3 ./download.py "$dst" "$server" "$user" "$decret"
+    python3 ./download.py "$dst" "$server" "$user" "$secret"
   )
   echo "Exit status $?"
 

@@ -20,7 +20,7 @@ if account.startswith("@"):
     account = account[1:]
 
 with open(secret) as f:
-    secret = f.read()
+    secret = f.read().strip()
 
 mastodon = Mastodon(
     access_token = secret,
@@ -49,7 +49,9 @@ for i, status in enumerate(statuses):
         file = os.path.join(destination, str(img["id"]) + ext)
         if not os.path.exists(file):
             urlretrieve(url, file)
-
+            print("downloaded", url, file)
+        else:
+            print("downloaded", file, "exists.")
 
 
 
