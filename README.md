@@ -39,6 +39,10 @@ Add this for updating each minute:
 * * * * * /home/pi/pixelfed-account-image-download/schedule.sh
 ```
 
+## Access Token
+
+![image](https://user-images.githubusercontent.com/564768/214557602-504e0afa-a8d0-4cb2-9d05-56296012145c.png)
+
 You will to retrieve an API token and put it into `secret.txt` from
 [pix.toot.wales/settings/applications](https://pix.toot.wales/settings/applications) or
 any other server as such.
