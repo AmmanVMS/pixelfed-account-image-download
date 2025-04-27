@@ -17,6 +17,8 @@ server = sys.argv[2] # https://server.domain
 account = sys.argv[3] # username@domain
 secret = sys.argv[4] # file with api token from https://pix.toot.wales/settings/applications
 fromdate = dt.datetime.strptime(sys.argv[5], "%Y-%m-%d").replace(tzinfo=dt.timezone.utc)
+if account.startswith("@"):
+    account = account[1:]
 with open(secret) as f:
     secret = f.read().strip()
 
