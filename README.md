@@ -50,6 +50,6 @@ any other server as such.
 ## Usage
 
 ```
-python3 download.py /path/to/images/folder https://pixelfed.server username@instance secret.txt
+python3 download.py /path/to/images/folder https://pixelfed.server username@instance secret.txt 2000-01-01
 ```
 
