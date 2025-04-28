@@ -8,7 +8,7 @@ dst="/data/share/phone/picture-frame/"
 server="https://pix.toot.wales"
 user="ammanvms"
 secret="secret.txt"
-
+fromdate="2000-01-01"
 
 # constants
 log="$0.log"
@@ -24,7 +24,7 @@ log="$0.log"
       exit
     fi
 
-    python3 ./download.py "$dst" "$server" "$user" "$secret"
+    python3 ./download.py "$dst" "$server" "$user" "$secret" "$fromdate"
   )
   echo "Exit status $?"
 
