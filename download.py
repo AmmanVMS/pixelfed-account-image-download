@@ -27,8 +27,10 @@ mastodon = Mastodon(
     api_base_url = server
 )
 
+mastodon.account_verify_credentials()
+
 users = mastodon.account_search(account)
-user_id = None
+user_id = mastodon.me()["id"]
 for user in users:
     if account.startswith(user["username"]):
         user_id = user["id"]
